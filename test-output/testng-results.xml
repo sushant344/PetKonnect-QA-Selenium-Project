@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-05T00:33:19 IST" name="Default suite" finished-at="2024-07-05T00:35:01 IST" duration-ms="101994">
+    <groups>
+    </groups>
+    <test started-at="2024-07-05T00:33:19 IST" name="Default test" finished-at="2024-07-05T00:35:01 IST" duration-ms="101994">
+      <class name="ExecutionTestCases.HomePage">
+        <test-method is-config="true" signature="getHomepage()[pri:0, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:19 IST" name="getHomepage" finished-at="2024-07-05T00:33:29 IST" duration-ms="9514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getHomepage -->
+        <test-method signature="testnavigationOfHomepage()[pri:1, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:29 IST" name="testnavigationOfHomepage" finished-at="2024-07-05T00:33:30 IST" duration-ms="1364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testnavigationOfHomepage -->
+        <test-method signature="testLogo()[pri:2, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:30 IST" name="testLogo" finished-at="2024-07-05T00:33:31 IST" duration-ms="592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogo -->
+        <test-method signature="testLogoNavigation()[pri:3, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:31 IST" name="testLogoNavigation" finished-at="2024-07-05T00:33:34 IST" duration-ms="3008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogoNavigation -->
+        <test-method signature="testImagesVisibility()[pri:4, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:34 IST" name="testImagesVisibility" finished-at="2024-07-05T00:33:36 IST" duration-ms="2726" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at ExecutionTestCases.HomePage.setExcelResult(HomePage.java:30)
+at ExecutionTestCases.HomePage.testImagesVisibility(HomePage.java:83)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImagesVisibility -->
+        <test-method signature="testLinksConnectivity()[pri:5, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:33:36 IST" name="testLinksConnectivity" finished-at="2024-07-05T00:34:17 IST" duration-ms="40551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLinksConnectivity -->
+        <test-method signature="testValidKeysSearchInput()[pri:6, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:34:17 IST" name="testValidKeysSearchInput" finished-at="2024-07-05T00:34:23 IST" duration-ms="6506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidKeysSearchInput -->
+        <test-method signature="testInvalidKeysSearchInput()[pri:7, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:34:23 IST" name="testInvalidKeysSearchInput" finished-at="2024-07-05T00:34:49 IST" duration-ms="25173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidKeysSearchInput -->
+        <test-method signature="testBlankKeysSearchInput()[pri:8, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:34:49 IST" name="testBlankKeysSearchInput" finished-at="2024-07-05T00:35:01 IST" duration-ms="11937" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBlankKeysSearchInput -->
+        <test-method is-config="true" signature="close()[pri:0, instance:ExecutionTestCases.HomePage@35d08e6c]" started-at="2024-07-05T00:35:01 IST" name="close" finished-at="2024-07-05T00:35:01 IST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- ExecutionTestCases.HomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
