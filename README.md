@@ -14,8 +14,7 @@ This project is an automated testing suite for [PetKonnect eCommerce application
             - [Test cases](#test-cases-file)
         - [Test Suite Structure](#test-suite-structure)
             - [Data driven testing utils](#data-driven-utils)
-            - [Execution of Tests]
-            - 
+            - [PetKonnect Execution File and Pages](#petkonnect-execution-pages)
 
 
 ## Project Structure
@@ -55,11 +54,11 @@ petkonnect-qa-selenium-project/
 - Google Chrome
 
 ### Steps to Setup the Project
-1. In your system create new project as a maven project.
+1. In our system create new project as a maven project.
 2. Add all necessary dependencies from maven repository or you can copy from [pom.xml](./pom.xml) file.
 3. Install TestNG from marketplace (if eclipse IDE then go to help > Eclipse marketplace).
-4. Whenever add or update anything in pom.xml do update your project (in eclipse IDE right click on project > maven > update project > force update > ok).
-5. Then you create and run your class in src > test > java. To run project right click in java file and run as a TestNG test.
+4. Whenever add or update anything in pom.xml need to do update our project (in eclipse IDE right click on project > maven > update project > force update > ok).
+5. Then you create and run class in src > test > java. To run project right click in java file and run as a TestNG test.
 6. If not able to see TestNG test then right click on project > properties > java build path > maven dependencies > select TestNG > Apply close.
 
 ## Test Documentations
@@ -87,8 +86,13 @@ Data-driven testing is a methodology in which test data is stored outside of the
 #### Implementation Details
 To implement data-driven testing in this project, we use Apache POI, a Java library for reading and writing Microsoft Office documents. The steps involved include:
 
-1. Reading Data from Excel: Before the test execution, the test data is read from the PetKonnect.xlsx file. This involves opening the Excel file, navigating to the correct sheet, and reading the values of the cells.
+1. **Reading Data from Excel:** Before the test execution, the test data is read from the PetKonnect.xlsx file. This involves opening the Excel file, navigating to the correct sheet, and reading the values of the cells.
 
-2. Executing Test Steps: The test data is used to perform the test steps, which can include actions like clicking buttons, entering text in fields, and verifying results on the web page.
+2. **Executing Test Steps:** The test data is used to perform the test steps, which can include actions like clicking buttons, entering text in fields, and verifying results on the web page.
 
-3. Writing Results to Excel: After the test execution, the actual results and the status (Pass/Fail) are written back to the Excel file. This involves opening the Excel file in write mode and updating the relevant cells with the results.
+3. **Writing Results to Excel:** After the test execution, the actual results and the status (Pass/Fail) are written back to the Excel file. This involves opening the Excel file in write mode and updating the relevant cells with the results.
+
+### PetKonnect Execution Pages
+The project contains various Java files, each consisting of methods to perform specific test cases. This modular approach allows for better organization, reusability, and maintainability of the test scripts.
+- Created instance in [PetKonnect.java](./src/test/java/ExecutionTestCases/) file to invoke java files all methods.
+- These file contains all test cases execution methods, by simply running this file we can perform all test cases in one shot.
