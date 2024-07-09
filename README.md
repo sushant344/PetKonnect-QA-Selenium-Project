@@ -10,6 +10,12 @@ This project is an automated testing suite for [PetKonnect eCommerce application
         - [Introduction](#introduction)
         - [Project structure](#project-structure)
         - [Setup and Installation](#setup-and-installation)
+        - [Test Documentations](#test-documentations)
+            - [Test cases](#test-cases-file)
+        - [Test Suite Structure](#test-suite-structure)
+            - [Data driven testing utils](#data-driven-utils)
+            - [Execution of Tests]
+            - 
 
 
 ## Project Structure
@@ -48,10 +54,33 @@ petkonnect-qa-selenium-project/
 - [Apache poi 5.2 or higher](https://mvnrepository.com/artifact/org.apache.poi/poi)
 - Google Chrome
 
-### Steps to setup the project
+### Steps to Setup the Project
 1. In your system create new project as a maven project.
 2. Add all necessary dependencies from maven repository or you can copy from [pom.xml](./pom.xml) file.
-3. Install TestNG from marketplace (if eclipse ide then go to help > Eclipse marketplace).
-4. Whenever add or update anything in pom.xml do update your project (in eclipse ide right click on project > maven > update project > force update > ok).
+3. Install TestNG from marketplace (if eclipse IDE then go to help > Eclipse marketplace).
+4. Whenever add or update anything in pom.xml do update your project (in eclipse IDE right click on project > maven > update project > force update > ok).
 5. Then you create and run your class in src > test > java. To run project right click in java file and run as a TestNG test.
 6. If not able to see TestNG test then right click on project > properties > java build path > maven dependencies > select TestNG > Apply close.
+
+## Test Documentations
+### Test Cases File
+The test cases for this project are documented in an Excel file located in the [Test cases](./Test-cases) directory. The file is named [PetKonnect.xlsx](https://docs.google.com/spreadsheets/d/1wReWlif0YtDsXZrp8YtyjB5bcknm1MUj0-0p_vtL2BY/edit?gid=1113167546#gid=1113167546). In this excel file executing test results and by apache poi writing a actual result.
+
+Note : As of now executing test results in local excel file but I will make execution in google sheet document.
+
+Test Cases Format
+Each test case is described with the following fields:
+
+- **Test Scenario ID:** Unique identifier for the test scenario.
+- **Test Scenarios:** Each page test functionalities.
+- **Test Case ID:** Unique identifier for the test case.
+- **Test Case Description:** Detailed description of the test case.
+- **Test Steps:** Step-by-step instructions to execute the test case.
+- **Test Input Data:** Input data for required webpage modules.
+- **Expected Result:** The expected outcome of the test case.
+- **Actual Result:** The actual outcome after executing the test case (to be filled during execution).
+- **Result:** Pass/Fail status of the test case (to be filled during execution).
+
+## Test Suite Structure
+### Data Driven Utils
+Data-driven testing is a methodology in which test data is stored outside of the test scripts, often in an external file like an Excel spreadsheet, database, or CSV file. In this project, we use an Excel file [PetKonnect.xlsx](./Test-cases) to store the test data. This allows us to separate the test logic from the test data and makes it easier to manage and update test cases.
