@@ -1,1 +1,7 @@
 /target/
+/src/test/java/ExecutionTestCases/AddtoCart.java
+/src/test/java/ExecutionTestCases/HomePage.java
+/src/test/java/ExecutionTestCases/LogIn.java
+/src/test/java/ExecutionTestCases/Products.java
+/src/test/java/ExecutionTestCases/SignUp.java
+/Test cases/
