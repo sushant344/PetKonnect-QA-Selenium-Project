@@ -64,7 +64,7 @@ petkonnect-qa-selenium-project/
 
 ## Test Documentations
 ### Test Cases File
-The test cases for this project are documented in an Excel file located in the [Test cases](./test-cases/) directory. The file is named [PetKonnect.xlsx](https://docs.google.com/spreadsheets/d/1wReWlif0YtDsXZrp8YtyjB5bcknm1MUj0-0p_vtL2BY/edit?gid=1113167546#gid=1113167546). In this excel file executing test results and by apache poi writing a actual result.
+The test cases for this project are documented in an Excel file located in the [Test cases](./Test%cases/) directory. The file is named [PetKonnect.xlsx](https://docs.google.com/spreadsheets/d/1wReWlif0YtDsXZrp8YtyjB5bcknm1MUj0-0p_vtL2BY/edit?gid=1113167546#gid=1113167546). In this excel file executing test results and by apache poi writing a actual result.
 
 Note : As of now executing test results in local excel file but I will make execution in google sheet document.
 
@@ -83,4 +83,4 @@ Each test case is described with the following fields:
 
 ## Test Suite Structure
 ### Data Driven Utils
-Data-driven testing is a methodology in which test data is stored outside of the test scripts, often in an external file like an Excel spreadsheet, database, or CSV file. In this project, we use an Excel file [PetKonnect.xlsx](./Test-cases) to store the test data. This allows us to separate the test logic from the test data and makes it easier to manage and update test cases.
+Data-driven testing is a methodology in which test data is stored outside of the test scripts, often in an external file like an Excel spreadsheet, database, or CSV file. In this project, we use an Excel file [PetKonnect.xlsx](./Test%cases) to store the test data. This allows us to separate the test logic from the test data and makes it easier to manage and update test cases.
