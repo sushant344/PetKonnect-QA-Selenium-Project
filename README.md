@@ -83,4 +83,12 @@ Each test case is described with the following fields:
 
 ## Test Suite Structure
 ### Data Driven Utils
-Data-driven testing is a methodology in which test data is stored outside of the test scripts, often in an external file like an Excel spreadsheet, database, or CSV file. In this project, we use an Excel file [PetKonnect.xlsx](./Test%20cases) to store the test data. This allows us to separate the test logic from the test data and makes it easier to manage and update test cases.
+Data-driven testing is a methodology in which test data is stored outside of the test scripts, often in an external file like an Excel spreadsheet, database, or CSV file. In this project, we use an Excel file [PetKonnect.xlsx](./Test%20cases) to store the test data with help of [ReadFileUtils.java](./src/test/java/AutomationUtils/ReadFileUtils.java) file for reading & writing test results. This allows us to separate the test logic from the test data and makes it easier to manage and update test cases.
+#### Implementation Details
+To implement data-driven testing in this project, we use Apache POI, a Java library for reading and writing Microsoft Office documents. The steps involved include:
+
+1. Reading Data from Excel: Before the test execution, the test data is read from the PetKonnect.xlsx file. This involves opening the Excel file, navigating to the correct sheet, and reading the values of the cells.
+
+2. Executing Test Steps: The test data is used to perform the test steps, which can include actions like clicking buttons, entering text in fields, and verifying results on the web page.
+
+3. Writing Results to Excel: After the test execution, the actual results and the status (Pass/Fail) are written back to the Excel file. This involves opening the Excel file in write mode and updating the relevant cells with the results.
