@@ -5,7 +5,9 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -19,19 +21,8 @@ public class HomePage {
 	WebDriver driver = new ChromeDriver();
 	Homepage home = new Homepage(driver);
 	
-//	set result in column as per test pass or fail--
-	void setExcelResult(Boolean status, int rowNum) throws IOException {
-		String result = status ? "PASS" : "FAIL";
-		ReadFileUtils.setCellData(path, "Homepage", rowNum, 8, result);
-		if(status) {
-			ReadFileUtils.fillGreenColor(path, "Homepage", rowNum, 8);
-		}else {
-			ReadFileUtils.fillRedColor(path, "Homepage", rowNum, 8);
-			Assert.fail();
-		}
-	}
 	
-	@BeforeTest
+	@BeforeClass
 	void getHomepage() throws IOException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String homelink = ReadFileUtils.getCellData(path, "Homepage", 2, 5);
@@ -47,7 +38,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, unable to navigate homepage";
 		ReadFileUtils.setCellData(path, "Homepage", 2, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 2);
+		home.setExcelResult(status, 2);
 	}
 	
 //	logo visibility --
@@ -58,7 +49,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, Logo is not visible";
 		ReadFileUtils.setCellData(path, "Homepage", 3, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 3);
+		home.setExcelResult(status, 3);
 	}
 	
 //	logo navigation --
@@ -69,7 +60,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, unable to navigate homepage";
 		ReadFileUtils.setCellData(path, "Homepage", 4, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 4);
+		home.setExcelResult(status, 4);
 	}
 	
 //	all images visibility --
@@ -80,7 +71,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, all images are not visible";
 		ReadFileUtils.setCellData(path, "Homepage", 5, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 5);
+		home.setExcelResult(status, 5);
 	}
 	
 //	all links connections --
@@ -92,7 +83,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, all links are not valid";
 		ReadFileUtils.setCellData(path, "Homepage", 6, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 6);
+		home.setExcelResult(status, 6);
 	}
 	
 	
@@ -103,7 +94,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, user not able to search";
 		ReadFileUtils.setCellData(path, "Homepage", 7, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 7);
+		home.setExcelResult(status, 7);
 	}
 	
 	
@@ -114,7 +105,7 @@ public class HomePage {
 		String ActualFailed = "Not expected, by entering invalid keys user able to see products";
 		ReadFileUtils.setCellData(path, "Homepage", 8, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 8);
+		home.setExcelResult(status, 8);
 	}
 	
 	
@@ -125,12 +116,13 @@ public class HomePage {
 		String ActualFailed = "Not expected, user able to see products";
 		ReadFileUtils.setCellData(path, "Homepage", 9, 7, 
 				status ? ActualPassed : ActualFailed);
-		setExcelResult(status, 9);
+		home.setExcelResult(status, 9);
 	}
 	
 	
-	@AfterTest
-	void close() {
+	@AfterClass
+	void close() throws InterruptedException {
+//		home.logoutAccount();
 		driver.quit();
 	}
 	

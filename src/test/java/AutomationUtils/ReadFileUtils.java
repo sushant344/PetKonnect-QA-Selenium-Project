@@ -77,7 +77,7 @@ public class ReadFileUtils {
         cell.setCellValue(data);
 
         cellstyle = wo.createCellStyle();
-        cellstyle.setAlignment(HorizontalAlignment.CENTER);
+//        cellstyle.setAlignment(HorizontalAlignment.CENTER);
 //        cellstyle.setAlignment(VerticalAlignment.MIDDLE);
         cellstyle.setWrapText(true);
         cell.setCellStyle(cellstyle);

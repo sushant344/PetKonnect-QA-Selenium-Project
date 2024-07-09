@@ -1,10 +1,13 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.SkipException;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -16,14 +19,31 @@ import AutomationUtils.ReadFileUtils;
 public class Homepage {
 	
 	WebDriver driver;
+	JavascriptExecutor js;
 	String path = System.getProperty("user.dir")+"\\Test cases\\PetKonnect.xlsx";
 	String logo = "//h2[@class='header__heading']//img[@alt='PetKonnect']";
 	String searchInput = "//input[@id='Search-In-Modal']";
 	String searchBtn = "//form[@class='search header__icons__only-space search--small']//button[@aria-label='Search']";
+	String loginBtn = "//a[@class='header__button']";
+	String logoutBtn = "//span[text()='Log out']";
 	
 	
 	public Homepage(WebDriver driver){
 		this.driver = driver;
+		this.js = (JavascriptExecutor) driver;
+	}
+	
+	
+//	set result in column as per test pass or fail--
+	public void setExcelResult(Boolean status, int rowNum) throws IOException {
+		String result = status ? "PASS" : "FAIL";
+		ReadFileUtils.setCellData(path, "Homepage", rowNum, 8, result);
+		if(status) {
+			ReadFileUtils.fillGreenColor(path, "Homepage", rowNum, 8);
+		}else {
+			ReadFileUtils.fillRedColor(path, "Homepage", rowNum, 8);
+			Assert.fail();
+		}
 	}
 
 	
@@ -153,5 +173,12 @@ public class Homepage {
 			
 		return status;
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
