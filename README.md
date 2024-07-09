@@ -51,3 +51,7 @@ petkonnect-qa-selenium-project/
 ### Steps to setup the project
 1. In your system create new project as a maven project.
 2. Add all necessary dependencies from maven repository or you can copy from [pom.xml](./pom.xml) file.
+3. Install TestNG from marketplace (if eclipse ide then go to help > Eclipse marketplace).
+4. Whenever add or update anything in pom.xml do update your project (in eclipse ide right click on project > maven > update project > force update > ok).
+5. Then you create and run your class in src > test > java. To run project right click in java file and run as a TestNG test.
+6. If not able to see TestNG test then right click on project > properties > java build path > maven dependencies > select TestNG > Apply close.
