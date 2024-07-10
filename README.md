@@ -97,3 +97,13 @@ To implement data-driven testing in this project, we use Apache POI, a Java libr
 The project contains various Java files, each consisting of methods to perform specific test cases. This modular approach allows for better organization, reusability, and maintainability of the test scripts.
 - Created instance in [PetKonnect.java](./src/test/java/ExecutionTestCases/) file to invoke java files all methods.
 - These file contains all test cases execution methods, by simply running this file we can perform all test cases in one shot.
+- To implement test cases, we created various test methods on various webpage modules. As mention below:
+#### Homepage
+[Homepage](./src/test/java/Pages/Homepage.java) class file which consist step by step testing methods flow includes:
+1. Navigation of homepage link by validating page title.
+2. Validation of visibility of logo and navigation of logo.
+3. All images and anchor links present on homepage.
+4. Search products by entering valid and invalid search keywords.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
