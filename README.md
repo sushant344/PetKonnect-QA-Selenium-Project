@@ -94,7 +94,7 @@ To implement data-driven testing in this project, we use Apache POI, a Java libr
 3. **Writing Results to Excel:** After the test execution, the actual results and the status (Pass/Fail) are written back to the Excel file. This involves opening the Excel file in write mode and updating the relevant cells with the results.
 
 ### PetKonnect Execution Pages
-The project contains various Java files, each consisting of methods to perform specific test cases. This modular approach allows for better organization, reusability, and maintainability of the test scripts.
+The project contains various [Java files](./src/test/java/Pages), each consisting of methods to perform specific test cases. This modular approach allows for better organization, reusability, and maintainability of the test scripts.
 - Created instance in [PetKonnect.java](./src/test/java/ExecutionTestCases/) file to invoke java files all methods.
 - These file contains all test cases execution methods, by simply running this file we can perform all test cases in one shot.
 - To implement test cases, we created various test methods on various webpage modules. As mention below:
@@ -104,6 +104,24 @@ The project contains various Java files, each consisting of methods to perform s
 2. Validation of visibility of logo and navigation of logo.
 3. All images and anchor links present on homepage.
 4. Search products by entering valid and invalid search keywords.
+#### Sign up
+[SignUp](./src/test/java/Pages/SignUpPage.java) class file which consist step by step testing methods flow includes:
+1. Navigation of sign up page link by validating page title.
+2. Validating creation of account by entering valid and invalid values in inputs.
+#### Log in
+[Login](./src/test/java/Pages/LoginPage.java) class file which consist step by step testing methods flow includes:
+1. Navigation of login page link by validating page title.
+2. Validating login the account by valid and invalid inputs credentials.
+3. After successfully logged in to account able to logout.
+#### Products page
+[Products page](./src/test/java/Pages/ProductsPage.java) class file which consist step by step testing methods flow includes:
+1. Navigation of all products page link by validating page title.
+2. Validation of display products by applying various filters and able to reset applied filters.
+#### Add to cart
+[Products page](./src/test/java/Pages/AddtocartPage.java) class file which consist step by step testing methods flow includes:
+1. Select specific product and able to add in cart.
+2. Check flow of cart product to checkout upto the payment page.
+3. Validation of able to remove product from cart.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
