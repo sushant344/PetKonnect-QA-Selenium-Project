@@ -98,6 +98,7 @@ The project contains various [Java files](./src/test/java/Pages), each consistin
 - Created instance in [PetKonnect.java](./src/test/java/ExecutionTestCases/) file to invoke java files all methods.
 - These file contains all test cases execution methods, by simply running this file we can perform all test cases in one shot.
 - To implement test cases, we created various test methods on various webpage modules. As mention below:
+### Overview of Pages
 ### Homepage
 [Homepage](./src/test/java/Pages/Homepage.java) class file which consist step by step testing methods flow includes:
 1. Navigation of homepage link by validating page title.
