@@ -15,6 +15,7 @@ This project is an automated testing suite for [PetKonnect eCommerce application
         - [Test Suite Structure](#test-suite-structure)
             - [Data driven testing utils](#data-driven-utils)
             - [PetKonnect Execution File and Pages](#petkonnect-execution-pages)
+        - [License](#license)
 
 
 ## Project Structure
