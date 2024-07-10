@@ -98,26 +98,26 @@ The project contains various [Java files](./src/test/java/Pages), each consistin
 - Created instance in [PetKonnect.java](./src/test/java/ExecutionTestCases/) file to invoke java files all methods.
 - These file contains all test cases execution methods, by simply running this file we can perform all test cases in one shot.
 - To implement test cases, we created various test methods on various webpage modules. As mention below:
-#### Homepage
+### Homepage
 [Homepage](./src/test/java/Pages/Homepage.java) class file which consist step by step testing methods flow includes:
 1. Navigation of homepage link by validating page title.
 2. Validation of visibility of logo and navigation of logo.
 3. All images and anchor links present on homepage.
 4. Search products by entering valid and invalid search keywords.
-#### Sign up
+### Sign up
 [SignUp](./src/test/java/Pages/SignUpPage.java) class file which consist step by step testing methods flow includes:
 1. Navigation of sign up page link by validating page title.
 2. Validating creation of account by entering valid and invalid values in inputs.
-#### Log in
+### Log in
 [Login](./src/test/java/Pages/LoginPage.java) class file which consist step by step testing methods flow includes:
 1. Navigation of login page link by validating page title.
 2. Validating login the account by valid and invalid inputs credentials.
 3. After successfully logged in to account able to logout.
-#### Products page
+### Products page
 [Products page](./src/test/java/Pages/ProductsPage.java) class file which consist step by step testing methods flow includes:
 1. Navigation of all products page link by validating page title.
 2. Validation of display products by applying various filters and able to reset applied filters.
-#### Add to cart
+### Add to cart
 [Products page](./src/test/java/Pages/AddtocartPage.java) class file which consist step by step testing methods flow includes:
 1. Select specific product and able to add in cart.
 2. Check flow of cart product to checkout upto the payment page.
